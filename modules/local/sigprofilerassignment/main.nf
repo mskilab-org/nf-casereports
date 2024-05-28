@@ -4,7 +4,7 @@ process SIGPROFILERASSIGNMENT {
     label 'process_medium'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'docker://mskilab/sigprofilerassignment:0.0.3':
+        '/gpfs/data/imielinskilab/singularity_files/nextflow_singularity_cache/mskilab-sigprofilerassignment-0.0.3.img':
         'mskilab/sigprofilerassignment:0.0.3' }"
 
     input:

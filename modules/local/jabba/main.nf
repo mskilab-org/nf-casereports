@@ -3,7 +3,7 @@ process JABBA {
     label 'process_high'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        '/gpfs/commons/home/tdey/lab/singularity_files/nextflow_singularity_cache/mskilab-jabba_cplex-latest.img':
+        '/gpfs/data/imielinskilab/singularity_files/nextflow_singularity_cache/mskilab-jabba_cplex-latest.img':
         'mskilab/jabba:latest' }"
 
     input:
@@ -171,7 +171,7 @@ process COERCE_SEQNAMES {
     label 'process_low'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        '/gpfs/commons/home/tdey/lab/singularity_files/nextflow_singularity_cache/mskilab-jabba_cplex-latest.img':
+        '/gpfs/data/imielinskilab/singularity_files/nextflow_singularity_cache/mskilab-jabba_cplex-latest.img':
         'mskilab/jabba:latest' }"
 
     input:

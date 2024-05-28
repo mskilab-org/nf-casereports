@@ -4,7 +4,7 @@ process NON_INTEGER_BALANCE {
     label 'process_medium'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        '/gpfs/commons/groups/imielinski_lab/home/sdider/Projects/nf-jabba/tests/test_runs/work/singularity/jabba_cplex_latest.sif':
+        '/gpfs/data/imielinskilab/singularity_files/nextflow_singularity_cache/mskilab-jabba_cplex-latest.img':
         'mskilab/jabba:latest' }"
 
     input:
@@ -93,7 +93,7 @@ process LP_PHASED_BALANCE {
     label 'process_medium'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        '/gpfs/commons/groups/imielinski_lab/home/sdider/Projects/nf-jabba/tests/test_runs/work/singularity/jabba_cplex_latest.sif':
+        '/gpfs/data/imielinskilab/singularity_files/nextflow_singularity_cache/mskilab-jabba_cplex-latest.img':
         'mskilab/jabba:latest' }"
 
     input:
