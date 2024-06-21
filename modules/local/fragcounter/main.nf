@@ -1,7 +1,7 @@
 process FRAGCOUNTER {
 
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_low'
 
     // TODO add fragcounter container
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
@@ -71,7 +71,7 @@ process FRAGCOUNTER {
     "${task.process}":
         fragcounter: ${VERSION}
     END_VERSIONS
-    """    
+    """
 
 }
 

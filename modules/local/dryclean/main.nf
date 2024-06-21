@@ -1,6 +1,6 @@
 process DRYCLEAN {
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_low'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'docker://mskilab/dryclean:0.0.4':

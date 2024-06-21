@@ -1,7 +1,7 @@
 process SIGPROFILERASSIGNMENT {
 
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_low'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         '/gpfs/data/imielinskilab/singularity_files/nextflow_singularity_cache/mskilab-sigprofilerassignment-0.0.3.img':

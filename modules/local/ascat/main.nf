@@ -1,7 +1,7 @@
 process ASCAT_SEG {
 
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_low'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'docker://mskilab/ascat_seg:latest':
@@ -67,6 +67,8 @@ process ASCAT_SEG {
 }
 
 process EXTRACT_PURITYPLOIDY {
+    label 'process_single'
+
     input:
     tuple val(meta), path(ascat_rds)
 

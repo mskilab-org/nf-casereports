@@ -1,7 +1,7 @@
 process CBS {
 
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_low'
 
     // TODO add fragcounter container
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?

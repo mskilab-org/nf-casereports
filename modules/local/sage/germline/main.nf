@@ -1,7 +1,7 @@
 process SAGE_GERMLINE {
 
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_low'
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/hmftools-sage:3.4--hdfd78af_1' :
